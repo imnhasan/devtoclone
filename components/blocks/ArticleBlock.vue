@@ -59,9 +59,9 @@ export default {
   },
   props: [],
   async fetch() {
-    const article = await fetch(
+    const article = await this.$axios.$get(
       `https://dev.to/api/articles/${this.$route.params.article}`
-    ).then((res) => res.json())
+    )
 
     if (article.id && article.user.username === this.$route.params.username) {
       this.article = article

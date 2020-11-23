@@ -55,9 +55,9 @@ export default {
     InlineErrorBlock
   },
   async fetch() {
-    const articles = await fetch(
+    const articles = await this.$axios.$get(
       `https://dev.to/api/articles?tag=nuxt&state=rising&page=${this.currentPage}`
-    ).then((res) => res.json())
+    )
 
     this.articles = this.articles.concat(articles)
   },

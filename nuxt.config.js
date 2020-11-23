@@ -39,7 +39,10 @@ export default {
     '@nuxtjs/svg',
     '@nuxtjs/style-resources'
   ],
-  modules: ['nuxt-ackee'],
+  modules: [
+  	'nuxt-ackee',
+  	'@nuxtjs/axios'
+  ],
   ackee: {
     server: 'https://ackee.nuxtjs.com',
     domainId: '6336379b-8d3e-4069-9d2e-897be6a7ed4e'
